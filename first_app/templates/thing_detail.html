@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{{thing.name}}{% endblock %}
+
+{% block heading %}
+Thing - {{thing.name}}
+{% endblock %}
+
+{% block content %}
+This Thing is called {{thing.name}}, it has id={{thing.id}}.
+{% endblock %}

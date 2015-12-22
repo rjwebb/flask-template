@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block errors %}
+{% if error %}
+<div class="error">Error: {{ error }}</div>
+{% endif %}
+{% endblock %}
+
+
+{% block heading %}
+All Things
+{% endblock %}
+
+
+{% block content %}
+{% for thing in things %}
+<a href="{{url_for('single_thing', thing_id=thing.id)}}">{{thing.id}} - {{thing.name}}</a><br/>
+{% endfor %}
+{% endblock %}
